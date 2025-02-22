@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name your-ec2-public-ip;
+    server 3.109.158.27;
 
     location / {
         proxy_pass http://127.0.0.1:5000;
