@@ -1,8 +1,11 @@
-server {
-    listen 80;
-    server 3.109.158.27;
+from flask import Flask
+app = Flask(__name__)
 
-    location / {
-        proxy_pass http://127.0.0.1:5000;
-       
+@app.route('/')
+def hello():
+    return "Hello, World!"
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
+
 
